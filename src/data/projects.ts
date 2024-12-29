@@ -10,17 +10,9 @@ interface Project {
 export const projects: Project[] = [
 
     {
-        title : 'Tri-city Bikes and Brews',
-        role : 'Web design + development',
-        tags : ['Wordpress blog', 'Custom theme', 'Modern design'],
-        cover : '/img/bikes-and-brews-cover.webp',
-        url : '/case-study/bikes-and-brews',
-    },
-
-    {
         title : 'Elite Canadian Homestay',
         role : 'Web design + development',
-        tags : ['Brochure website', 'Professional design', 'Clean design'],
+        tags : ['Brochure website', 'Professional, clean design', 'Static site'],
         cover : '/img/elite-homestay-cover.webp',
         url : '/case-study/elite-homestay',
     },
@@ -28,9 +20,17 @@ export const projects: Project[] = [
     {
         title : 'Kelly Ann Creations',
         role : 'Web design + development',
-        tags : ['Brochure website', 'Minimalist design', 'Modern design'],
+        tags : ['Brochure website', 'Minimalist, modern design', 'Static site'],
         cover : '/img/kelly-ann-creations-cover.webp',
         url : '/case-study/kelly-ann-creations',
+    },
+
+    {
+        title : 'Tri-city Bikes and Brews',
+        role : 'Web design + development',
+        tags : ['Wordpress blog', 'Custom theme', 'Modern design'],
+        cover : '/img/bikes-and-brews-cover.webp',
+        url : '/case-study/bikes-and-brews',
     },
 
     {
@@ -44,7 +44,7 @@ export const projects: Project[] = [
     {
         title : 'Megan Riley',
         role : 'Web design + development',
-        tags : ['Landing Page', 'Modern design', 'Professional design'],
+        tags : ['Landing Page', 'Modern, professional design', 'Static site'],
         cover : '/img/megan-riley-cover.webp',
         url : '/case-study/megan-riley',
     },

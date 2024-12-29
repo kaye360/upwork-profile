@@ -48,31 +48,5 @@ import Section from '../components/Section.astro';
 		</div>
 	</Section>
 
-	<div class="fixed bottom-1 left-0 w-full">
-		<Section>
-			<a 
-				id="back-to-top"
-				href="#top" 
-				class="block text-center text-lg bg-white/90 py-2 transition-all"
-			>
-				Back to top
-			</a>
-		</Section>
-	</div>
-
 </Layout>
 
-<script>
-const backToTop = document.querySelector('#back-to-top') as HTMLAnchorElement
-backToTop.addEventListener('click', () => {
-	backToTop.style.display = 'none'
-	setTimeout( () => {
-		backToTop.style.display = 'block'
-		backToTop.style.opacity = '0'
-	}, 1000)
-
-	setTimeout( () => {
-		backToTop.style.opacity = '1'
-	}, 2000)
-})
-</script>
