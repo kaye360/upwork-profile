@@ -1,0 +1,50 @@
+---
+import H1 from "../../components/H1.astro";
+import Section from "../../components/Section.astro";
+import TextBlock from "../../components/TextBlock.astro";
+import Layout from "../../layouts/Layout.astro";
+import { projects } from "../../data/projects";
+import ProjectRole from "../../components/ProjectRole.astro";
+import ProjectTags from "../../components/ProjectTags.astro";
+import BackToHome from "../../components/BackToHome.astro";
+import H2 from "../../components/H2.astro";
+import List from "../../components/List.astro";
+
+const project = projects.filter( project => project.title = 'Kelly Ann Creations')[0]
+---
+
+<Layout>
+
+    <Section>
+        
+        <BackToHome />
+        
+        <TextBlock>
+
+            <H1>Case Study: {project.title}</H1>
+            
+            <ProjectRole>Project Role: {project.role}</ProjectRole>
+
+            <ProjectTags>
+                { project.tags.map( tag => (
+                    <span class=" first:hidden">&#8226;</span>
+                    <span>{tag}</span>
+                ))}
+            </ProjectTags>
+
+            <img 
+                src={project.cover}
+                width="576"
+                height="576"
+                alt=""
+                loading="lazy"
+            />
+
+            
+
+
+        </TextBlock>
+
+    </Section>
+
+</Layout>

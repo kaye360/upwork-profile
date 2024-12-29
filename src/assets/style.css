@@ -6,8 +6,8 @@
     html {
         -webkit-tap-highlight-color: transparent;
     }
-    
+
     a {
-        @apply text-sky-600 underline hover:bg-sky-600 hover:text-white
+        @apply text-cyan-600 underline hover:bg-cyan-600 hover:text-white
     }
 }

@@ -34,10 +34,11 @@ import Section from '../components/Section.astro';
 						width="576"
 						height="576"
 						alt=""
+						loading="lazy"
 					/>
 					<a 
 						href={project.url}
-						class="text-center border border-sky-500 px-8 py-4 text-lg"
+						class="text-center border border-cyan-500 px-8 py-4 text-lg"
 					>
 						View case study
 					</a>
@@ -52,7 +53,7 @@ import Section from '../components/Section.astro';
 			<a 
 				id="back-to-top"
 				href="#top" 
-				class="block text-center text-lg bg-white/90 py-2"
+				class="block text-center text-lg bg-white/90 py-2 transition-all"
 			>
 				Back to top
 			</a>
@@ -67,6 +68,11 @@ backToTop.addEventListener('click', () => {
 	backToTop.style.display = 'none'
 	setTimeout( () => {
 		backToTop.style.display = 'block'
-	}, 150)
+		backToTop.style.opacity = '0'
+	}, 1000)
+
+	setTimeout( () => {
+		backToTop.style.opacity = '1'
+	}, 2000)
 })
 </script>

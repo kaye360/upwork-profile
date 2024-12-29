@@ -20,14 +20,25 @@ import Section from '../components/Section.astro'
 		<Section>
 			<header 
 				id="top"
-				class="mb-6 py-6 border-b-4 border-sky-100"
+				class="mb-6 py-6 border-b-4 border-cyan-100"
 			>
-				<H1>
-					Josh Kaye - Upwork Portfolio
-				</H1>
-				<span class="italic opacity-60 select-none">
-					Full stack web developer
-				</span>
+				<a 
+					href="/"
+					class="flex items-center gap-2 shrink-0mb-3 text-cyan-800 select-none no-underline hover:underline hover:bg-transparent hover:text-cyan-800"
+				>
+					<img 
+						src="/img/josh-avatar.webp"
+						class="w-16 h-16 rounded-full"
+					/>
+					<div>
+						<div class=" text-xl font-medium ">
+							Josh Kaye - Upwork Portfolio
+						</div>
+						<div class="italic opacity-60 select-none">
+							Full stack web developer
+						</div>
+					</div>
+				</a>
 			</header>
 		</Section>
 		<slot />
