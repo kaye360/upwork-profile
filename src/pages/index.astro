@@ -1,11 +1,72 @@
 ---
-import Welcome from '../components/Welcome.astro';
+import H2 from '../components/H2.astro';
+import Project from '../components/Project.astro';
+import ProjectRole from '../components/ProjectRole.astro';
+import ProjectTags from '../components/ProjectTags.astro';
 import Layout from '../layouts/Layout.astro';
-
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+import { projects } from '../data/projects'
+import Section from '../components/Section.astro';
 ---
 
 <Layout>
-	<Welcome />
+
+	<Section>
+		<p class="mb-12">
+			Welcome to the Upwork portfolio of <a href="https://www.upwork.com/freelancers/~01f7823376641097d8">Josh Kaye</a>. This portfolio is exclusively for Upwork. Please feel free to contact me through <a href="https://www.upwork.com/freelancers/~01f7823376641097d8">Upwork</a> for any inquiries. Thank you!
+		</p>
+	</Section>
+
+	<Section>
+		<div class="grid gap-16">
+	
+			{  projects.map( project => (
+				<Project>
+					<H2>{project.title}</H2>
+					<ProjectRole>{project.role}</ProjectRole>
+					<ProjectTags>
+						{ project.tags.map( tag => (
+							<span class=" first:hidden">&#8226;</span>
+							<span>{tag}</span>
+						))}
+					</ProjectTags>
+					<img 
+						src={project.cover} 
+						width="576"
+						height="576"
+						alt=""
+					/>
+					<a 
+						href={project.url}
+						class="text-center border border-sky-500 px-8 py-4 text-lg"
+					>
+						View case study
+					</a>
+				</Project>
+			))}
+			
+		</div>
+	</Section>
+
+	<div class="fixed bottom-1 left-0 w-full">
+		<Section>
+			<a 
+				id="back-to-top"
+				href="#top" 
+				class="block text-center text-lg bg-white/90 py-2"
+			>
+				Back to top
+			</a>
+		</Section>
+	</div>
+
 </Layout>
+
+<script>
+const backToTop = document.querySelector('#back-to-top') as HTMLAnchorElement
+backToTop.addEventListener('click', () => {
+	backToTop.style.display = 'none'
+	setTimeout( () => {
+		backToTop.style.display = 'block'
+	}, 150)
+})
+</script>
