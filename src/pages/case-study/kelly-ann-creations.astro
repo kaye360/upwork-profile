@@ -8,9 +8,11 @@ import ProjectRole from "../../components/ProjectRole.astro";
 import ProjectTags from "../../components/ProjectTags.astro";
 import BackToHome from "../../components/BackToHome.astro";
 import H2 from "../../components/H2.astro";
+
+
 import List from "../../components/List.astro";
 
-const project = projects.filter( project => project.title = 'Kelly Ann Creations')[0]
+const project = projects.filter( project => project.title === 'Kelly Ann Creations')[0]
 ---
 
 <Layout>
@@ -40,8 +42,36 @@ const project = projects.filter( project => project.title = 'Kelly Ann Creations
                 loading="lazy"
             />
 
-            
+            <p>Kelly Ann Creations is a local bakery in Port Coquitlam, BC, specializing in custom wedding cakes and artisanal baked goods. The original website was outdated and didn't fully represent Kelly's brand. The goal was to build a modern, fast-loading website that showcased Kelly's creations and made it easier for customers to place orders.</p>
 
+            <H2>Project Goals</H2>
+
+            <ul>
+                <li><strong>Modern Design:</strong> Create a sleek, minimalist site to showcase Kelly's cakes and pastries.</li>
+                <li><strong>Fast Performance:</strong> Use Astro to ensure fast page load times.</li>
+                <li><strong>Clear Call to Actions:</strong> Make it easy for users to inquire, order, or contact Kelly.</li>
+                <li><strong>Mobile-Friendly:</strong> Ensure the site works seamlessly on all devices.</li>
+            </ul>
+
+            <H2>The Solution</H2>
+
+            <p>Using <strong>Astro</strong>, a static site web development framework, I built a fast, mobile-optimized website with the following features:</p>
+
+            <List>
+                <li><strong>Minimalist Custom Theme:</strong> A modern design with large images and a neutral color palette, focusing on Kelly's baked goods.</li>
+                <li><strong>Fast Load Times:</strong> Astro ensures ultra-fast page loads, improving user experience and SEO.</li>
+                <li><strong>Clear Call to Actions:</strong> Prominent call-to-action buttons encourage users to place orders or inquire about custom cakes.</li>
+                <li><strong>Responsive Design:</strong> The site is fully optimized for mobile devices, ensuring a smooth experience for all users.</li>
+                <li><strong>Trendy Portfolio Gallery:</strong> Showcasing Kelly's wedding cakes and other baked goods with high-quality images.</li>
+            </List>
+
+            <H2>The Result</H2>
+
+            <p>The new website has significantly improved Kelly Ann Creations' online presence. With its fast load times, modern design, and easy navigation, the site has led to increased customer engagement and orders. The clear Call to Actions and responsive design have streamlined the booking process, making it easier for customers to connect with Kelly and place orders.</p>
+
+            <H2>Conclusion</H2>
+
+            <p>The Astro-powered static site has boosted Kelly Ann Creations' visibility and business, offering a sleek, efficient platform to attract new customers and showcase her talents. The modern design and fast performance enhance the customer experience, making it a key tool for growing her small business.</p>
 
         </TextBlock>
 
