@@ -9,6 +9,7 @@ import ProjectTags from "../../components/ProjectTags.astro";
 import BackToHome from "../../components/BackToHome.astro";
 import H2 from "../../components/H2.astro";
 import List from "../../components/List.astro";
+import ProjectLink from "../../components/ProjectLink.astro";
 
 const project = projects.filter( project => project.title === 'Elite Canadian Homestay')[0]
 ---
@@ -81,6 +82,9 @@ const project = projects.filter( project => project.title === 'Elite Canadian Ho
 
             <p>The new website for the Vancouver Homestay Business is a vast improvement over the old site, offering a modern, functional, and easy-to-navigate platform for potential guests. With features like online booking, a clean design, and seamless mobile functionality, the website now meets the needs of both the client and their guests, improving overall user experience and boosting business growth.</p>
 
+            { project.projectUrl && 
+                <ProjectLink href={project.projectUrl} />
+            }
 
         </TextBlock>
 

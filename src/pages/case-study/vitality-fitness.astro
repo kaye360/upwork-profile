@@ -9,6 +9,7 @@ import ProjectTags from "../../components/ProjectTags.astro";
 import BackToHome from "../../components/BackToHome.astro";
 import H2 from "../../components/H2.astro";
 import List from "../../components/List.astro";
+import ProjectLink from "../../components/ProjectLink.astro";
 
 const project = projects.filter( project => project.title === 'Vitality Fitness')[0]
 ---
@@ -84,6 +85,9 @@ const project = projects.filter( project => project.title === 'Vitality Fitness'
             <H2>Conclusion</H2>
             <p>The WordPress website for <strong>Vitality Fitness</strong> successfully enhanced the company's online presence. With a custom theme, booking system, and mobile-friendly design, the site has streamlined client interaction, allowing the trainer to focus more on delivering quality fitness coaching.</p>
           
+            { project.projectUrl && 
+                <ProjectLink href={project.projectUrl} />
+            }
 
         </TextBlock>
 

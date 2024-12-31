@@ -10,6 +10,7 @@ import BackToHome from "../../components/BackToHome.astro";
 import H2 from "../../components/H2.astro";
 
 import List from "../../components/List.astro";
+import ProjectLink from "../../components/ProjectLink.astro";
 
 const project = projects.filter( project => project.title === 'Kelly Ann Creations')[0]
 ---
@@ -90,6 +91,10 @@ const project = projects.filter( project => project.title === 'Kelly Ann Creatio
 
             <p>The Astro-powered static site has boosted Kelly Ann Creations' visibility and business, offering a sleek, efficient platform to attract new customers and showcase her talents. The modern design and fast performance enhance the customer experience, making it a key tool for growing her small business.</p>
 
+            { project.projectUrl && 
+                <ProjectLink href={project.projectUrl} />
+            }
+            
         </TextBlock>
 
     </Section>

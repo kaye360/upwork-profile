@@ -9,6 +9,7 @@ import ProjectTags from "../../components/ProjectTags.astro";
 import BackToHome from "../../components/BackToHome.astro";
 import H2 from "../../components/H2.astro";
 import List from "../../components/List.astro";
+import ProjectLink from "../../components/ProjectLink.astro";
 
 const project = projects.filter( project => project.title === 'Megan Riley')[0]
 ---
@@ -74,6 +75,9 @@ const project = projects.filter( project => project.title === 'Megan Riley')[0]
             <H2>Conclusion</H2>
             <p>The custom landing page for Megan Riley helped her connect with non-neurotypical individuals by presenting her community in a clear, inviting way. With its user-friendly design, strong calls to action, and mobile optimization, the page effectively promoted her mission and encouraged more people to join.</p>
 
+            { project.projectUrl && 
+                <ProjectLink href={project.projectUrl} />
+            }
 
         </TextBlock>
 

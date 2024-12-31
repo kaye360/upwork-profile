@@ -9,6 +9,7 @@ import ProjectRole from "../../components/ProjectRole.astro";
 import ProjectTags from "../../components/ProjectTags.astro";
 import BackToHome from "../../components/BackToHome.astro";
 import List from "../../components/List.astro";
+import ProjectLink from "../../components/ProjectLink.astro";
 
 const project = projects.filter( project => project.title === 'Tri-city Bikes and Brews')[0]
 ---
@@ -85,6 +86,10 @@ const project = projects.filter( project => project.title === 'Tri-city Bikes an
 
             <H2>Conclusion</H2>
             <p>This WordPress site streamlined event management, improved social media integration, and helped Tri-City Bikes and Brews grow its community. The custom theme made the site both functional and easy to update, with a strong local presence supported by SEO and press exposure.</p>
+
+            { project.projectUrl && 
+                <ProjectLink href={project.projectUrl} />
+            }
         </TextBlock>
 
     </Section>

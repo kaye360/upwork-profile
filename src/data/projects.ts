@@ -4,7 +4,8 @@ interface Project {
     role : string,
     tags : string[],
     cover : string,
-    url : string,
+    caseStudyUrl : string,
+    projectUrl : string | null,
 }
 
 export const projects: Project[] = [
@@ -14,7 +15,8 @@ export const projects: Project[] = [
         role : 'Web design + development',
         tags : ['Brochure website', 'Professional, clean design', 'Static site'],
         cover : '/img/elite-homestay-cover.webp',
-        url : '/case-study/elite-homestay',
+        caseStudyUrl : '/case-study/elite-homestay',
+        projectUrl : 'https://elitehomestay.com',
     },
 
     {
@@ -22,7 +24,8 @@ export const projects: Project[] = [
         role : 'Web design + development',
         tags : ['Brochure website', 'Minimalist, modern design', 'Static site'],
         cover : '/img/kelly-ann-creations-cover.webp',
-        url : '/case-study/kelly-ann-creations',
+        caseStudyUrl : '/case-study/kelly-ann-creations',
+        projectUrl : 'https://kelly-ann-creations.netlify.app/',
     },
 
     {
@@ -30,7 +33,8 @@ export const projects: Project[] = [
         role : 'Web design + development',
         tags : ['Wordpress blog', 'Custom theme', 'Modern design'],
         cover : '/img/bikes-and-brews-cover.webp',
-        url : '/case-study/bikes-and-brews',
+        caseStudyUrl : '/case-study/bikes-and-brews',
+        projectUrl : 'https://bikesandbrews.ca',
     },
 
     {
@@ -38,7 +42,8 @@ export const projects: Project[] = [
         role : 'Web design + development',
         tags : ['Wordpress', 'Modern design', 'Custom theme'],
         cover : '/img/vitality-fitness-cover.webp',
-        url : '/case-study/vitality-fitness',
+        caseStudyUrl : '/case-study/vitality-fitness',
+        projectUrl : 'https://vitality-fitness.ca',
     },
 
     {
@@ -46,7 +51,8 @@ export const projects: Project[] = [
         role : 'Web design + development',
         tags : ['Landing Page', 'Modern, professional design', 'Static site'],
         cover : '/img/megan-riley-cover.webp',
-        url : '/case-study/megan-riley',
+        caseStudyUrl : '/case-study/megan-riley',
+        projectUrl : null,
     },
     
 ]
